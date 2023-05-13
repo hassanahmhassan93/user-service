@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: userService
+  server:
+    port: ${SERVER_PORT:8080}
+netty:
+  default:
+    allocator:
+      max-order: 3
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: root
+    dialect: MYSQL
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        show_sql: true
+flyway:
+  datasources:
+    default:
+      enabled: true
